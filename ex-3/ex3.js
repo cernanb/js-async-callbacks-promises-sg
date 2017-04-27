@@ -13,15 +13,8 @@ function fakeAjax(url,cb) {
 	},randomDelay);
 }
 
-function output(text) {
-	console.log(text);
-}
-
-// **************************************
-
 function getFile(file) {
 	// what do we do here?
 }
 
 // request all files at once in "parallel"
-// ???
