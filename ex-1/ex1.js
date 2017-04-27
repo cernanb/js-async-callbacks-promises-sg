@@ -13,6 +13,10 @@ const fakeJax = (url,cb) => {
 	},randomDelay);
 }
 
+const output = (text) {
+	console.log(text)
+}
+
 const getFile = (file, cb) => {
 	fakeJax(file,function(text){
 		//what should be done here?

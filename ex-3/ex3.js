@@ -13,6 +13,10 @@ function fakeAjax(url,cb) {
 	},randomDelay);
 }
 
+const output = (text) {
+	console.log(text)
+}
+
 function getFile(file) {
 	// what do we do here?
 }
