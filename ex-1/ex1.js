@@ -13,14 +13,24 @@ const fakeJax = (url,cb) => {
 	},randomDelay);
 }
 
-const output = (text) {
+const output = (text) => {
 	console.log(text)
 }
 
 const getFile = (file, cb) => {
 	fakeJax(file,function(text){
-		//what should be done here?
+		cb(text)
 	});
 }
 
 // requesting files one at a time; similar to Example 1 in callback.js
+getFile("file1", function(text) {
+	output(text)
+	getFile("file2", function(text) {
+		output(text)
+		getFile("file3", function(text) {
+			output(text)
+			output("Complete!")
+		})
+	})
+})
